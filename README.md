@@ -12,4 +12,6 @@ sbt -J-Xmx200M run
 
 Or just run `./run-leak-test.sh` which does the exact same thing.
 
+A fix for this is here, https://github.com/http4s/http4s-jdk-http-client/pull/335. You can locally publish that commit and then change the version in the `build.sbt` of this project. Running on that version will run forever, using constant memory, as expected.
+
 [http4s-jdk-client]: https://github.com/http4s/http4s-jdk-http-client "http4s JDK Client"
